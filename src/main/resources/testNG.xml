@@ -4,7 +4,7 @@
 
     <listeners>
         
-        <listener class-name="com.crm.qa.extentreportslister.ExtentReporterNG"></listener>
+        <listener class-name="com.crm.qa.extentreportslister.ExtentReporterNG" />
         
     </listeners>
     
@@ -14,8 +14,8 @@
         <classes>
 
             <class name="com.crm.qa.testcases.TestHomePage"></class>
-          <!--  <class name="com.crm.qa.testcases.TestHomePage"></class>
-            <class name="com.crm.qa.testcases.TestLoginPage"></class>-->
+          <class name="com.crm.qa.testcases.TestLoginPage"></class>
+            <class name="com.crm.qa.testcases.TestContactPage"></class>
 
 
         </classes>

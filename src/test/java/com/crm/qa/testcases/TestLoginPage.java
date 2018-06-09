@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 
 import javax.swing.text.TabSet;
 
-public class TestLoginPage extends TestBase {
+public class TestLoginPage extends TestBase{
 
 
     LoginPage loginPage;

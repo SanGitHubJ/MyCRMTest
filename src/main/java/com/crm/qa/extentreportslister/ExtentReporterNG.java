@@ -1,11 +1,9 @@
 package com.crm.qa.extentreportslister;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.IReporter;
-import com.relevantcodes.extentreports.LogStatus;
+import com.relevantcodes.extentreports.*;
 
 
+import com.relevantcodes.extentreports.model.Test;
 import org.testng.IResultMap;
 import org.testng.ISuite;
 import org.testng.ISuiteResult;
@@ -20,12 +18,33 @@ import java.util.List;
 import java.util.Map;
 import java.util.Date;
 
-public abstract class ExtentReporterNG implements IReporter {
+public class ExtentReporterNG implements IReporter {
 
 
     private ExtentReports extent;
-//public void generateReports(List<XmlSuite> xmlSuites, List<ISuite> suites,String outputDirectory)
-    public void generateReports(List<ISuite> suites,String outputDirectory){
+
+    public void start(Report report) {
+
+    }
+
+    public void stop() {
+
+    }
+
+    public void flush() {
+
+    }
+
+    public void addTest(Test test) {
+
+    }
+
+    public void setTestRunnerLogs() {
+
+    }
+
+    public void generateReports(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory){
+    //public void generateReports(List<ISuite> suites,String outputDirectory){
 
         extent = new ExtentReports(outputDirectory+ File.separator+"Extent.html",true);
 
@@ -77,4 +96,5 @@ public abstract class ExtentReporterNG implements IReporter {
         return calendar.getTime();
 
     }
+
 }

@@ -15,10 +15,23 @@
 >>>>>>TO VERIFY OUT PUT>>>>>>>>
  Assert.assertEquals
 
- >>>>>>SWITCH TO >>>..
- switchToFrame();
-   driver.switchTo().window(childid);
- Set<String> handler = driver.getWindowHandles();
+ >>>>>>New WIndow Handlers >>>..
+       driver.findElement(By.xpath("//a[contains(text(),'Good PopUp #1')]")).click();
+
+        Set<String> handler = driver.getWindowHandles();
+
+        Iterator<String> it = handler.iterator();
+
+        String parentid = it.next();
+
+        System.out.println("Paranet id------>"+parentid);
+
+        String childid = it.next();
+
+        System.out.println("Child >>>"+childid);
+
+        driver.switchTo().window(childid);
+ >>>>capture alerts
    Alert alert = driver.switchTo().alert();
 
              System.out.println(alert.getText());
@@ -54,6 +67,24 @@
          }
   >>>>>GET SCREEN SHOT
   TAKESCREENSHOT
+
+  >>>>>>To select Dynamic Value in search result>>>>>.
+
+  List<WebElement> list =  driver.findElements(By.xpath("//ul[@role='listbox']//li//descendant::div[@class='sbqs_c']"));
+
+          System.out.println("Google search list lise is ====>"+list.size());
+
+          Thread.sleep(3000);
+
+          for(int i=0; i<list.size();i++){
+
+              System.out.println(" Java serach result is ==>>"+list.get(i).getText());
+
+              if(list.get(i).getText().contains("javascript")){
+                  list.get(i).click();
+                  break;
+              }
+  <<<<<<<<<<<<<<<<<>>>>>>>>>
 >>>>>>>.
 IM SANATH JAYAWEERA SOFTWARE QULITY ASSURANCE PROFESIONAL OVER 10 PLUS YEARS OF EXPERICE WORKING IN USA, UK
  LARGE PROJECTS IN  VERIES DOMAINS SUCH AS BANKING, INSURANCE, TELECOMMITION, CAPITAL MARKET INVOLGING TO
@@ -77,3 +108,38 @@ uk pra > mas
 YOUTUB >>JMeter 4.0 : How to record scripts in JMeter 4
 URL>http://performancetestingpractice.com/
 UN/PW:testjm/1qaz@Zaq1
+
+<<<<<,MAVEN>>>>>>..
+command
+to clean and install >>mvn clean install
+to excute only test without build >> mvn test
+to run only build or skips testcases >> mvn package -DskipTests
+to run only build or skips test case [for this need to add coomnd into pom.xml] >>>mvn package -Dmaven.test.skip=true
+
+>>>>>>JAVA CONCEPTS>>>>>.
+> OVERLOADING MEAN REPEATNG SAME METHOD BY PASSING DIFFERENT ARGUMENT IN SAME CLASS
+>/ Method overriding when same method present in parent class and child class with same name and same number
+         >>of argument is called method overriding
+
+>NONSTATICS VARIABLE AND METHODD NEED TO CALL ALWAYS WITH MAIN CLASS OBJECT AS REFERENCE
+> STATIC VARIBALE AND METHOD CAN CALL DIRECTLY OR WITH CLASS NAME DOT METHOD/VAR
+> INT[] ARRARY CAN ALWAYS STORE ONLY
+        >< FIXED SIZE TO AVOID THIS CAN USE COLLECTIONS,ARRAYLIST,HASMAP
+        ><AND ONLY ONE DATA TYPE INSTED CAN USE OBJECT ARRAY WHICH CAN STORE ALL DATA TYPE IE INT, STRING ,DOUBLE ETC
+> JAVA REFERENCE BY VALUE MEAN PASS VALUE DIRECTLY TO METHOD
+          > EG: MAIN CLAA INT X=10 CAN PASS TO METHOD SUM(INT A )
+          >REFERNCE BY NAME MEAN CAN PASS OBJECT FROM MAIN CLAA TO METHOD EG SWAP METHOD
+
+ > TO CONVERT STRING VALUE TO INT
+        > INT I = INTGER.parseInt(somevalue);
+
+ >> TO INHERITH PARENT FEATURE TO CHILD WE CAN
+
+            >> EXTEND CHILD CLASS TO PARENT CLASS, AFTER THAT WE CAN CREATE ANOTHER TEST CLASS WHICH  CREATING OBJECT
+            >> FROM CHILD AND ACCEES PARENT FEATURE
+ >> STATIC POLYMORPHISH IS ACCEING PARENT FEATURE FROM CHILD CLASS, IF THERE DUPLICATE METHOD IT WILL ALWAYS REFER TO CHILD CLASS
+
+ >> TODOWN CASTING MEAN CREATING CHILD OBJECT AND ASSING TO PARENT
+            >> EG CAR IS PARENT >> CAR C = NEW BMW;
+
+>> ARRAY SIZE CAN GET USING A.LENGTH and get valie A[i] , WHILE ARRALIST CAN GIT ARRAY.SIZE AND TO GET ARRAYLIST VALUE ARRAY.GET(i)
