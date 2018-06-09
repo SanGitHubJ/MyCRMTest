@@ -4,26 +4,6 @@
     <list default="true" id="aca77eba-7908-46c6-880e-544ced50a33d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crm/qa/config/Info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crm/qa/config/Info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crm/qa/extentreportslister/ExtentReporterNG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crm/qa/extentreportslister/ExtentReporterNG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testNG.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/crm/qa/testcases/TestLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/crm/qa/testcases/TestLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/base/TestBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/config/.config.properties.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/config/Info.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/config/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/extentreportslister/ExtentReporterNG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/pages/ContactsPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/pages/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/pages/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/testdata/TestData.ods" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/testdata/TestData.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/util/DataProviderExcel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crm/qa/util/TestUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/testNG.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/crm/qa/testcases/TestContactPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/crm/qa/testcases/TestHomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/crm/qa/testcases/TestLoginPage.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,8 +67,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="192">
+              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
             </state>
           </provider>
         </entry>
@@ -144,6 +124,7 @@
       <find>setTestRunnerLogs</find>
       <find>addTest</find>
       <find>flush</find>
+      <find>resources</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -561,10 +542,10 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.35462186" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.35462186" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21303074" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21303074" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -1024,8 +1005,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        <state relative-caret-position="192">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
