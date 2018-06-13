@@ -18,6 +18,9 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//a[contains(text(),'New Contact')]")
     WebElement lnkNewContact;
 
+    @FindBy(xpath = "//a[contains(text(),'Calendar')]")
+    WebElement lnkcal;
+
     public HomePage(){
 
         PageFactory.initElements(driver,this);
@@ -45,6 +48,12 @@ public class HomePage extends TestBase {
         Actions action = new Actions(driver);
         action.moveToElement(lnkContact).build().perform();
         lnkNewContact.click();
+    }
+
+    public void validateCalPage(){
+
+        lnkcal.click();
+
     }
 
 }

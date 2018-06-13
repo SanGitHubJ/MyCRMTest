@@ -1,6 +1,8 @@
 package com.crm.qa.pages;
 
 import com.crm.qa.base.TestBase;
+import com.crm.qa.util.CaptureLogs;
+import com.crm.qa.util.ScreenShotsHandle;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,7 +10,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+
 public class LoginPage extends TestBase {
+
+    ScreenShotsHandle screenshot = new ScreenShotsHandle();
+    CaptureLogs getLogs = new CaptureLogs();
 
     //page factory OR Object Repo
 
@@ -44,7 +51,7 @@ public class LoginPage extends TestBase {
         return imgCRM.isDisplayed();
     }
 
-    public HomePage validateLoginIntoCRMApp(String Un, String Pw) throws InterruptedException {
+    public HomePage validateLoginIntoCRMApp(String Un, String Pw) throws InterruptedException, IOException {
 
         txtUserName.sendKeys(Un);
         txtPassword.sendKeys(Pw);
@@ -60,7 +67,15 @@ public class LoginPage extends TestBase {
 
         driver.findElement(By.xpath("//div[@class='intercom-borderless-dismiss-button']")).click();
 
+        screenshot.screenShot(driver,"loginPageone");
+
+        //getLogs.logCapture();
+
+
         btnloginbtn.click();
+
+
+
         return new HomePage();
 
 

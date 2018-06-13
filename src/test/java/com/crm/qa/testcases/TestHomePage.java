@@ -7,6 +7,9 @@ import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
+
+import java.io.IOException;
 
 public class TestHomePage extends TestBase {
 
@@ -15,13 +18,15 @@ public class TestHomePage extends TestBase {
     ContactsPage contactsPage;
     TestUtil util;
 
+    SoftAssert softAssert = new SoftAssert();
+
     public TestHomePage(){
 
         super();
     }
 
     @BeforeMethod
-    public void setUp() throws InterruptedException {
+    public void setUp() throws InterruptedException, IOException {
 
         initialization();
         loginPage = new LoginPage();
@@ -33,7 +38,16 @@ public class TestHomePage extends TestBase {
     @Test(priority = 1)
     public void validateHomePageTitle(){
         String hTitle = homepage.validateHomePageTitle();
-        Assert.assertEquals(hTitle,"CRMPRO","Home page title not fpound");
+
+        //hard assersion won't exucute subcequently test case if prior TC are failed.
+       // Assert.assertEquals(hTitle,"CRMPROt","Home page title not fpound");
+
+        //soft assersion, will run subcequent test  cases in same test eventhough prior TC failed.
+        softAssert.assertEquals(hTitle,"CRMPROt","Home page title not fpound");
+
+        System.out.println("to check hard asserston");
+
+        softAssert.assertAll();
     }
 
     @Test(priority = 2)
@@ -41,6 +55,8 @@ public class TestHomePage extends TestBase {
 
             util.switchToFrame();
         Assert.assertTrue(homepage.validateHomePageUser());
+
+        System.out.println("to check hard asserston should run bxc in seperate Test");
     }
 
     @Test(priority = 3)
@@ -55,5 +71,7 @@ public class TestHomePage extends TestBase {
     public void tearDown(){
         driver.quit();
     }
+
+
 
 }

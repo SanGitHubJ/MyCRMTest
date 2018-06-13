@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import javax.swing.text.TabSet;
+import java.io.IOException;
 
 public class TestLoginPage extends TestBase{
 
@@ -41,7 +42,7 @@ public class TestLoginPage extends TestBase{
         Assert.assertTrue(crmImg);
     }
     @Test(priority = 3)
-    public void validateLoginCRMHome() throws InterruptedException {
+    public void validateLoginCRMHome() throws InterruptedException, IOException {
        // Thread.sleep(3000);
        homePage =  loginPage.validateLoginIntoCRMApp(prop.getProperty("username"),prop.getProperty("password"));
     }

@@ -26,7 +26,7 @@ public class TestContactPage extends TestBase {
     }
 
     @BeforeMethod
-    public void setUp() throws InterruptedException {
+    public void setUp() throws InterruptedException, IOException {
 
         initialization();
         loginPage = new LoginPage();
@@ -62,7 +62,7 @@ public class TestContactPage extends TestBase {
     }
 
         @Test(priority = 1, dataProvider = "getCRMContacts")
-        public void enterContatsDetails(String title,String FN, String LN, String Cmp) throws InterruptedException {
+        public void enterContatsDetails(String title,String FN, String LN, String Cmp) throws InterruptedException, IOException {
 
         util.switchToFrame();
         homepage.clickNewContactLink();

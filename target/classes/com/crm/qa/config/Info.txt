@@ -1,0 +1,145 @@
+
+>>>>>>To read external file>>>>>
+
+            prop = new Properties();
+            FileInputStream ip = new FileInputStream
+  >>>>>>To initilize driver>>>>>>>>.
+ System.setProperty("webdriver.chrome.driver", driverPath.toString());
+//System.setProperty("webdriver.chrome.driver","E:\\Sanath\\SelleniumNew\\MyProjects\\src\\main\\java\\com\\crm\\qa\\config\\chromedriver.exe");
+ driver = new ChromeDriver();
+ >>>>>>Initialization>>>>>>>>>
+ driver.manage().window().maximize();
+             driver.manage().deleteAllCookies();
+             driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+             driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+>>>>>>TO VERIFY OUT PUT>>>>>>>>
+ Assert.assertEquals
+
+ >>>>>>New WIndow Handlers >>>..
+       driver.findElement(By.xpath("//a[contains(text(),'Good PopUp #1')]")).click();
+
+        Set<String> handler = driver.getWindowHandles();
+
+        Iterator<String> it = handler.iterator();
+
+        String parentid = it.next();
+
+        System.out.println("Paranet id------>"+parentid);
+
+        String childid = it.next();
+
+        System.out.println("Child >>>"+childid);
+
+        driver.switchTo().window(childid);
+ >>>>capture alerts
+   Alert alert = driver.switchTo().alert();
+
+             System.out.println(alert.getText());
+
+                 Thread.sleep(3000);
+
+             alert.accept();
+
+         Iterator<String> it = handler.iterator();
+ >>>>>>select dropdown value
+  Select select = new Select(driver.findElement(By.name("title")));
+         select.selectByVisibleText(title)
+ >>>>>>verify img>>>>
+ isDisplay
+
+ >>To inizilize Objects
+ PageFactory.initElements(driver,this);
+
+ >>>>>.READ EXCEL DATA
+    @DataProvider
+     public Object[][] getCRMContacts() throws IOException {
+
+        Object data [][] =  exceldata.getExcelTestData("Contacts");
+        return data;
+     }
+
+         @Test(priority = 1, dataProvider = "getCRMContacts")
+         public void enterContatsDetails(String title,String FN, String LN, String Cmp) throws InterruptedException {
+
+         util.switchToFrame();
+         homepage.clickNewContactLink();
+         contactsPage.enterContactDeatils(title,FN,LN,Cmp);
+         }
+  >>>>>GET SCREEN SHOT
+  TAKESCREENSHOT
+
+  >>>>>>To select Dynamic Value in search result>>>>>.
+
+  List<WebElement> list =  driver.findElements(By.xpath("//ul[@role='listbox']//li//descendant::div[@class='sbqs_c']"));
+
+          System.out.println("Google search list lise is ====>"+list.size());
+
+          Thread.sleep(3000);
+
+          for(int i=0; i<list.size();i++){
+
+              System.out.println(" Java serach result is ==>>"+list.get(i).getText());
+
+              if(list.get(i).getText().contains("javascript")){
+                  list.get(i).click();
+                  break;
+              }
+  <<<<<<<<<<<<<<<<<>>>>>>>>>
+>>>>>>>.
+IM SANATH JAYAWEERA SOFTWARE QULITY ASSURANCE PROFESIONAL OVER 10 PLUS YEARS OF EXPERICE WORKING IN USA, UK
+ LARGE PROJECTS IN  VERIES DOMAINS SUCH AS BANKING, INSURANCE, TELECOMMITION, CAPITAL MARKET INVOLGING TO
+ TEAM LEADING AND MANAGMENT , TEST ESTIMATION, PLANNING
+ ALSO IM WELL ADHIRE AND AWARE OF THE SDLC METHOLOGIES AND PROCESS SUCH AS WATERFALL , AGILE, ETC..
+
+IN SAME TIME I HAD INVOLVING TO TEST DESING, EXCUTION IN  SIT, UAT AS WELL AS TEST AUTOMATION AND PERFOMACE TESING USING
+ SELENIUM AND JMETER.ALSO VERY FAMILER AND GIT, MAVEN, JENKINS DB TOOLS AND WORKING ON VERIOUS OS SUCH AS WINDOWS LINUS/UNIX.
+
+ALSO LAST 3.5 YEARS I HAD WORK IN UOB AS SENIOR QA LEAD INVLOING TO TEST DESING, EXCUTION , TEST PLANING , ESTIMATION
+AND TEAM LEADING AND MANAGEMNT IN CONSUREMER BANKING PROJECT.
+
+
+hcb
+hcl >> card, loan > risk > tire1 > tire2 >
+weleth retails loans >>risk haddop
+uk pra > mas
+
+>>>>JMETER>>>>>>>
+
+YOUTUB >>JMeter 4.0 : How to record scripts in JMeter 4
+URL>http://performancetestingpractice.com/
+UN/PW:testjm/1qaz@Zaq1
+
+<<<<<,MAVEN>>>>>>..
+command
+to clean and install >>mvn clean install
+to excute only test without build >> mvn test
+to run only build or skips testcases >> mvn package -DskipTests
+to run only build or skips test case [for this need to add coomnd into pom.xml] >>>mvn package -Dmaven.test.skip=true
+
+>>>>>>JAVA CONCEPTS>>>>>.
+> OVERLOADING MEAN REPEATNG SAME METHOD BY PASSING DIFFERENT ARGUMENT IN SAME CLASS
+>/ Method overriding when same method present in parent class and child class with same name and same number
+         >>of argument is called method overriding
+
+>NONSTATICS VARIABLE AND METHODD NEED TO CALL ALWAYS WITH MAIN CLASS OBJECT AS REFERENCE
+> STATIC VARIBALE AND METHOD CAN CALL DIRECTLY OR WITH CLASS NAME DOT METHOD/VAR
+> INT[] ARRARY CAN ALWAYS STORE ONLY
+        >< FIXED SIZE TO AVOID THIS CAN USE COLLECTIONS,ARRAYLIST,HASMAP
+        ><AND ONLY ONE DATA TYPE INSTED CAN USE OBJECT ARRAY WHICH CAN STORE ALL DATA TYPE IE INT, STRING ,DOUBLE ETC
+> JAVA REFERENCE BY VALUE MEAN PASS VALUE DIRECTLY TO METHOD
+          > EG: MAIN CLAA INT X=10 CAN PASS TO METHOD SUM(INT A )
+          >REFERNCE BY NAME MEAN CAN PASS OBJECT FROM MAIN CLAA TO METHOD EG SWAP METHOD
+
+ > TO CONVERT STRING VALUE TO INT
+        > INT I = INTGER.parseInt(somevalue);
+
+ >> TO INHERITH PARENT FEATURE TO CHILD WE CAN
+
+            >> EXTEND CHILD CLASS TO PARENT CLASS, AFTER THAT WE CAN CREATE ANOTHER TEST CLASS WHICH  CREATING OBJECT
+            >> FROM CHILD AND ACCEES PARENT FEATURE
+ >> STATIC POLYMORPHISH IS ACCEING PARENT FEATURE FROM CHILD CLASS, IF THERE DUPLICATE METHOD IT WILL ALWAYS REFER TO CHILD CLASS
+
+ >> TODOWN CASTING MEAN CREATING CHILD OBJECT AND ASSING TO PARENT
+            >> EG CAR IS PARENT >> CAR C = NEW BMW;
+
+>> ARRAY SIZE CAN GET USING A.LENGTH and get valie A[i] , WHILE ARRALIST CAN GIT ARRAY.SIZE AND TO GET ARRAYLIST VALUE ARRAY.GET(i)

@@ -18,32 +18,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Date;
 
-public class ExtentReporterNG implements IReporter {
+public abstract class ExtentReporterNG implements IReporter {
 
 
     private ExtentReports extent;
 
-    public void start(Report report) {
-
-    }
-
-    public void stop() {
-
-    }
-
-    public void flush() {
-
-    }
-
-    public void addTest(Test test) {
-
-    }
-
-    public void setTestRunnerLogs() {
-
-    }
-
-    public void generateReports(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory){
+     public void generateReports(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory){
     //public void generateReports(List<ISuite> suites,String outputDirectory){
 
         extent = new ExtentReports(outputDirectory+ File.separator+"Extent.html",true);
