@@ -34,7 +34,7 @@ public class TestContactPage extends TestBase {
         contactsPage = new ContactsPage();
         util = new TestUtil();
         exceldata = new DataProviderExcel();
-        contactsPage = new ContactsPage();
+       // contactsPage = new ContactsPage();
 
     }
 //

@@ -1,7 +1,7 @@
 package com.crm.qa.pages;
 
 import com.crm.qa.base.TestBase;
-import com.crm.qa.util.CaptureLogs;
+//import com.crm.qa.util.CaptureLogs;
 import com.crm.qa.util.ScreenShotsHandle;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,7 @@ import java.io.IOException;
 public class LoginPage extends TestBase {
 
     ScreenShotsHandle screenshot = new ScreenShotsHandle();
-    CaptureLogs getLogs = new CaptureLogs();
+   // CaptureLogs getLogs = new CaptureLogs();
 
     //page factory OR Object Repo
 
