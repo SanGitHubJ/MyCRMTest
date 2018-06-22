@@ -1,6 +1,7 @@
 package com.crm.qa.util;
 
 import com.crm.qa.base.TestBase;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -13,13 +14,27 @@ public class ScreenShotsHandle extends TestBase {
 
     //public WebDriver driver;
 
-    public static void screenShot(WebDriver driver,String screenShotName) throws IOException {
+    //below method to get screenshots any test steps
 
-        TakesScreenshot st = (TakesScreenshot)driver;
+//    public static void screenShot(WebDriver driver,String screenShotName) throws IOException {
+//
+//        TakesScreenshot st = (TakesScreenshot)driver;
+//
+//        File source =  st.getScreenshotAs(OutputType.FILE);
+//
+//        FileHandler.copy(source, new File("./screenShots/"+screenShotName+".jpg"));
+//    }
 
-        File source =  st.getScreenshotAs(OutputType.FILE);
+    public void failedTC(String testMethodName) throws IOException {
 
-        FileHandler.copy(source, new File("./screenShots/"+screenShotName+".jpg"));
+        File scrfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//        FileUtils.copyFile(scrfile,new File("/home/sanath/Workplace/Selenium/Intellij/MyCRMTest" +
+//                "/screenShots/FailedScreenShots/"
+//        +"failedshot_"+this.getClass().getName()+".jpg"));
+
+        FileUtils.copyFile(scrfile,new File("/home/sanath/Workplace/Selenium/Intellij/MyCRMTest" +
+                "/screenShots/FailedScreenShots/"
+                +testMethodName+".jpg"));
     }
 
 }

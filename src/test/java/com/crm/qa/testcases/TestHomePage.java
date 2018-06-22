@@ -4,6 +4,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
+import com.crm.qa.util.CustomListenerToFailedTC;
 import com.crm.qa.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -11,6 +12,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 
+@Listeners(CustomListenerToFailedTC.class)
 public class TestHomePage extends TestBase {
 
     LoginPage loginPage;

@@ -6,7 +6,8 @@
         
         <listener class-name="com.crm.qa.extentreportslister.ExtentsReportsListernerNew" />
 
-       <listener class-name="com.crm.qa.util.MyTransformer" /> <!-- to call failed testcases-->
+       <!-- to call failed testcases-->
+       <!--<listener class-name="com.crm.qa.util.MyTransformer" /> -->
         
     </listeners>
     
@@ -17,9 +18,9 @@
 
 
           <class name="com.crm.qa.testcases.TestLoginPage"></class>
-         <!-- <class name="com.crm.qa.testcases.TestHomePage"></class>
+          <class name="com.crm.qa.testcases.TestHomePage"></class>
             <class name="com.crm.qa.testcases.TestContactPage"></class>
-            <class name="com.crm.qa.testcases.TestCalenderDate"></class>-->
+            <class name="com.crm.qa.testcases.TestCalenderDate"></class>
 
 
         </classes>

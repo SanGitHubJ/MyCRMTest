@@ -3,16 +3,17 @@ package com.crm.qa.testcases;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
+import com.crm.qa.util.CustomListenerToFailedTC;
 import org.apache.log4j.Logger;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import javax.swing.text.TabSet;
 import java.io.IOException;
 
-
+//this Listener to call once any Test is failed
+@Listeners(CustomListenerToFailedTC.class)
 public class TestLoginPage extends TestBase{
+
 
 
     LoginPage loginPage;
@@ -36,9 +37,11 @@ public class TestLoginPage extends TestBase{
     public void validateLoginPageTitle(){
 
         String title = loginPage.validateLoginPageTitle();
-        Assert.assertEquals(title,"Free CRM software in the cloud powers sales and customer service","Home page not found");
+        Assert.assertEquals(title,"Freea CRM software in the cloud powers sales and customer service","Home page not found");
 
         logger.info("#################this is logign page Info#################");
+
+
     }
 
     @Test(priority = 2)
@@ -46,6 +49,8 @@ public class TestLoginPage extends TestBase{
 
         Boolean crmImg =  loginPage.validateCRMImage();
         Assert.assertTrue(crmImg);
+        //Assert.assertEquals(true,false);
+
     }
     @Test(priority = 3)
     public void validateLoginCRMHome() throws InterruptedException, IOException {

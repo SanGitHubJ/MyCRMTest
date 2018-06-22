@@ -4,15 +4,14 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
+import com.crm.qa.util.CustomListenerToFailedTC;
 import com.crm.qa.util.DataProviderExcel;
 import com.crm.qa.util.TestUtil;
-import junit.framework.Assert;
 import org.testng.annotations.*;
 
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 
+@Listeners(CustomListenerToFailedTC.class)
 public class TestContactPage extends TestBase {
 
     LoginPage loginPage;

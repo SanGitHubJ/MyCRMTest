@@ -69,7 +69,7 @@ public class ContactsPage extends TestBase {
         btnSave.click();
         Thread.sleep(4000);
 
-        screenshot.screenShot(driver,"contactPage");
+       // screenshot.screenShot(driver,"contactPage");
 
       //  getLogs.logCapture();
     }

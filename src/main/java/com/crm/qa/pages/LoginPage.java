@@ -67,7 +67,7 @@ public class LoginPage extends TestBase {
 
         driver.findElement(By.xpath("//div[@class='intercom-borderless-dismiss-button']")).click();
 
-        screenshot.screenShot(driver,"loginPageone");
+       // screenshot.screenShot(driver,"loginPageone");
 
         //getLogs.logCapture();
 
