@@ -18,9 +18,9 @@
 
 
           <class name="com.crm.qa.testcases.TestLoginPage"></class>
-          <class name="com.crm.qa.testcases.TestHomePage"></class>
+         <!-- <class name="com.crm.qa.testcases.TestHomePage"></class>
             <class name="com.crm.qa.testcases.TestContactPage"></class>
-            <class name="com.crm.qa.testcases.TestCalenderDate"></class>
+            <class name="com.crm.qa.testcases.TestCalenderDate"></class>-->
 
 
         </classes>
