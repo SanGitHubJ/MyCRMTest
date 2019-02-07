@@ -22,7 +22,7 @@ public class TestBase {
 
         try{
             prop = new Properties();
-            FileInputStream ip = new FileInputStream("src\main\java\com\crm\qa\config\config.properties");
+            FileInputStream ip = new FileInputStream("src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 
             prop.load(ip);
         }
@@ -43,7 +43,7 @@ public class TestBase {
 
             if (browserName.equals("chrome")) {
 
-                String driverlocation = "D:\EFuture\Sanath\Projects\Automation\SeleniumNew\chromedriver.exe";
+                String driverlocation = "D:\\EFuture\\Sanath\\Projects\\Automation\\SeleniumNew\\chromedriver.exe";
                 File driverPath = new File(driverlocation);
                 System.setProperty("webdriver.chrome.driver", driverPath.toString());
                 //System.setProperty("webdriver.chrome.driver","E:\\Sanath\\SelleniumNew\\MyProjects\\src\\main\\java\\com\\crm\\qa\\config\\chromedriver.exe");
