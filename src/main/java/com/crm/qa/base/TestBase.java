@@ -22,8 +22,7 @@ public class TestBase {
 
         try{
             prop = new Properties();
-            FileInputStream ip = new FileInputStream("/home/sanath/Workplace/Selenium/Intellij/"
-                    +"MyCRMTest/src/main/java/com/crm/qa/config/config.properties");
+            FileInputStream ip = new FileInputStream("C:\Program Files (x86)\Jenkins\workspace\MYTest\src\main\java\com\crm\qa\config\config.properties");
 
             prop.load(ip);
         }
@@ -44,14 +43,14 @@ public class TestBase {
 
             if (browserName.equals("chrome")) {
 
-                String driverlocation = "/home/sanath/Applications/Drivers/chromedriver";
+                String driverlocation = "D:\EFuture\Sanath\Projects\Automation\SeleniumNew\chromedriver.exe";
                 File driverPath = new File(driverlocation);
                 System.setProperty("webdriver.chrome.driver", driverPath.toString());
                 //System.setProperty("webdriver.chrome.driver","E:\\Sanath\\SelleniumNew\\MyProjects\\src\\main\\java\\com\\crm\\qa\\config\\chromedriver.exe");
                 driver = new ChromeDriver();
             } else if (browserName.equals("FireFox")) {
 
-                String driverlocation = "/home/sanath/Applications/Drivers/chromedriver";
+                String driverlocation = "D:\EFuture\Sanath\Projects\Automation\SeleniumNew\chromedriver.exe";
                 File driverPath = new File(driverlocation);
                 System.setProperty("webdriver.gecko.driver", driverPath.toString());
                 driver = new FirefoxDriver();
