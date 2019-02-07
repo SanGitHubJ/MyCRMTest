@@ -27,8 +27,7 @@ public class DataProviderExcel extends TestBase {
     static Workbook book;
     static Sheet sheet;
 
-    public static String TESTDATA_SHEET_PATH = "/home/sanath/Workplace/Selenium/Intellij/"
-    +"MyCRMTest/src/main/java/com/crm/qa/testdata/TestData.xlsx";
+    public static String TESTDATA_SHEET_PATH = "src\\main\\java\\com\\crm\\qa\\testdata\\TestData.xlsx";
 
 public static Object[][] getExcelTestData(String sheetName) throws IOException {
 
