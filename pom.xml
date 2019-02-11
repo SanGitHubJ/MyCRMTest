@@ -14,7 +14,7 @@
 
   <!-- <properties>
         <maven.test.skip>true</maven.test.skip>>
-    </properties>  -->
+    </properties>  
 
 
     <build>
@@ -55,7 +55,7 @@
 
         </plugins>
 
-    </build>
+    </build>  -->
 
     <dependencies>
 
