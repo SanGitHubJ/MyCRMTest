@@ -50,7 +50,7 @@ public class TestBase {
                 driver = new ChromeDriver();
             } else if (browserName.equals("FireFox")) {
 
-                String driverlocation = "D:\\EFuture\\Sanath\\Projects\\Automation\\SeleniumNew\\chromedriver.exe";
+                String driverlocation = "D:\\EFuture\\Sanath\\Projects\\Automation\\SeleniumNew\\geckodriver.exe";
                 File driverPath = new File(driverlocation);
                 System.setProperty("webdriver.gecko.driver", driverPath.toString());
                 driver = new FirefoxDriver();
