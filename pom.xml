@@ -22,27 +22,27 @@
         <plugins>
             <plugin>
                  <groupId>org.apache.maven.plugins</groupId>
-                 <artifactId>maven-compiler-plugin</artifactId>>
+                 <artifactId>maven-compiler-plugin</artifactId>
                      <configuration>
                         <source>1.6</source>
-                        <target>1.6</target>>
+                        <target>1.6</target>
                     </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>>
+                <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>>
                 <configuration>
                     <suiteXmlFiles>
-                        <suitexmlfile>src/main/resources/testNG.xml</suitexmlfile>>
-                    </suiteXmlFiles>>
+                        <suitexmlfile>src/main/resources/testNG.xml</suitexmlfile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>>
+                <artifactId>maven-source-plugin</artifactId>
                  <executions>
                     <execution>
                         <id>attach-sources</id>
