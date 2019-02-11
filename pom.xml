@@ -35,7 +35,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suitexmlfile>src/main/resources/testNG.xml</suitexmlfile>
+                        <suitexmlfile>testNG.xml</suitexmlfile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
