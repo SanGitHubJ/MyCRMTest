@@ -43,14 +43,14 @@ public class TestBase {
 
             if (browserName.equals("chrome")) {
 
-                String driverlocation = "D:\\EFuture\\Sanath\\Projects\\Automation\\SeleniumNew\\ChromeD\\new\\chromedriver.exe";
+                String driverlocation = "D:\\\\Sanath\\Projects\\Automation\\SeleniumNew\\ChromeD\\new\\chromedriver.exe";
                 File driverPath = new File(driverlocation);
                 System.setProperty("webdriver.chrome.driver", driverPath.toString());
                 //System.setProperty("webdriver.chrome.driver","E:\\Sanath\\SelleniumNew\\MyProjects\\src\\main\\java\\com\\crm\\qa\\config\\chromedriver.exe");
                 driver = new ChromeDriver();
             } else if (browserName.equals("FireFox")) {
 
-                String driverlocation = "D:\\EFuture\\Sanath\\Projects\\Automation\\SeleniumNew\\geckodriver.exe";
+                String driverlocation = "D:\\\\Sanath\\Projects\\Automation\\SeleniumNew\\geckodriver.exe";
                 File driverPath = new File(driverlocation);
                 System.setProperty("webdriver.gecko.driver", driverPath.toString());
                 driver = new FirefoxDriver();
